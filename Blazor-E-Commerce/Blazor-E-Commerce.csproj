@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Blazor_E_Commerce</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blazor-E-Commerce.CoreBusiness\Blazor-E-Commerce.CoreBusiness.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>

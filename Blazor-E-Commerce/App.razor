@@ -1,4 +1,7 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿<Router AppAssembly="@typeof(App).Assembly"
+        AdditionalAssemblies="new[] {
+typeof(Blazor_E_Commerce.Web.CustomerPortal.Pages.ViewProductComponent).Assembly
+}">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />

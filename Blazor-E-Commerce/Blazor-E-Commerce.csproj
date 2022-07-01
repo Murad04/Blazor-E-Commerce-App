@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -10,6 +10,25 @@
   <ItemGroup>
     <ProjectReference Include="..\Blazor-E-Commerce.CoreBusiness\Blazor-E-Commerce.CoreBusiness.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.Web.AdminPortal\Blazor-E-Commerce.Web.AdminPortal.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.Web.CustomerPortal\Blazor-E-Commerce.Web.CustomerPortal.csproj" />
+    <ProjectReference Include="..\ClassLibrary1\DataStoreHardCode.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

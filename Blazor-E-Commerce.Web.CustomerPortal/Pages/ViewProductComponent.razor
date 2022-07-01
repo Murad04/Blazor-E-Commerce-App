@@ -7,11 +7,11 @@
 <div class="card" style="width: 28rem;">
     <div class="card-body">
         <img src="@product.ImageLink" />
-        <h5 class="card-title">@product.Name</h5>
-        <h6 class="card-subtitle mb-2 text-muted">@product.Brand</h6>
+        <h5 class="card-title">@product.ProductName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@product.ProductBrand</h6>
         <hr />
         <p>
-            Price: <label style="color:darkred">@product.Price.ToString("c")</label>
+            Price: <label style="color:darkred">@product.ProductPrice.ToString("c")</label>
         </p>
         <p class="card-text">@product.Description</p>
     </div>

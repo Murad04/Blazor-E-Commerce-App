@@ -1,5 +1,6 @@
 ﻿using Blazor_E_Commerce.CoreBusiness.Models;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
+using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

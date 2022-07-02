@@ -2,6 +2,7 @@ using Blazor_E_Commerce.Data;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
 using Blazor_E_Commerce.UseCases.SearchProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen;
+using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
 using DataStoreHardCode;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;

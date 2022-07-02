@@ -1,7 +1,9 @@
 ﻿@page "/product/{id:int}"
+@using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces
 
+@inject NavigationManager navigationManager;
 @inject IViewProductUseCase viewProductUseCase
-
+@inject IAddProductToCardUseCase addProductUseCase
 <h3>Product Details</h3>
 
 <div class="card" style="width: 28rem;">
@@ -15,6 +17,7 @@
         </p>
         <p class="card-text">@product.Description</p>
     </div>
+    <button class="btn btn-primary" @onclick="AddToCard">Add to card</button>
 </div>
 <br/>
 <NavLink href="products">Back to Products</NavLink>
@@ -33,7 +36,9 @@
             product = viewProductUseCase.Execute(Id);
 
     }
-
-
-
+    private void AddToCard()
+    {
+        addProductUseCase.Execute(product.ProductID );
+        navigationManager.NavigateTo("/");
+    }
 }

@@ -42,7 +42,7 @@ namespace DataStoreHardCode
             #endregion Writing DB with HardCode for Products
         }
 
-        public Product GetProduct(int id)
+        public Product? GetProduct(int id)
         {
             return products.FirstOrDefault(x => x.ProductID == id);
         }

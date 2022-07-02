@@ -7,7 +7,7 @@ namespace Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore
 {
     public interface IProductRepository
     {
-        Product GetProduct(int id);
+        Product? GetProduct(int id);
         IEnumerable<Product> GetProducts(string filter = null);
     }
 }

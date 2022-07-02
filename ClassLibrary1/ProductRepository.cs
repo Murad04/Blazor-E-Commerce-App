@@ -14,6 +14,7 @@ namespace DataStoreHardCode
 
         public ProductRepository()
         {
+            #region Writing DB with HardCode for Products
             products = new List<Product>
             {
                 new Product { ProductID = 495, ProductBrand = "maybelline", ProductName = "Maybelline Face Studio Master Hi-Light Light Booster Bronzer", ProductPrice = 14.99M, ImageLink = "https://d3t32hsnjxo7q6.cloudfront.net/i/991799d3e70b8856686979f8ff6dcfe0_ra,w158,h184_pa,w158,h184.png", Description = "Maybelline Face Studio Master Hi-Light Light Boosting bronzer formula has an expert  balance of shade + shimmer illuminator for natural glow. Skin goes  soft-lit with zero glitz.    For Best Results: Brush over all shades in palette and gently sweep over  cheekbones, brow bones, and temples, or anywhere light naturally touches  the face.                            "},
@@ -38,6 +39,7 @@ namespace DataStoreHardCode
                 new Product { ProductID = 291, ProductBrand = "maybelline", ProductName = "Maybelline Eye Studio Color Tattoo 24HR Cream Gel Shadow Leather", ProductPrice = 8.99M, ImageLink = "https://d3t32hsnjxo7q6.cloudfront.net/i/cf21d194ab14ee3c527d02682c358a7a_ra,w158,h184_pa,w158,h184.png", Description = "                          So rich. So creamy. Only Maybelline's cream gel eye shadow formula gets the look of couture leather so right!            Dare to wear Maybelline Color Tattoo leather 24HR long wear eye shadow.Features: Ink technology creates 24HR wear shadow for our most intense, long-lasting color saturationCream eye shadow formula glides on without creasing and keeps color vibrantOphthalmologist-tested.  Safe for sensitive eyes and contact lens wearers   Shade Range:                                          "},
                 new Product { ProductID = 286, ProductBrand = "maybelline", ProductName = "Maybelline The Nudes Eyeshadow Palette in The Blushed Nudes", ProductPrice = 17.99M, ImageLink = "https://d3t32hsnjxo7q6.cloudfront.net/i/49d98e112e77d2a9a0c8fad28df89a1e_ra,w158,h184_pa,w158,h184.png", Description = "Create looks from day to night and deep to light with Maybelline's The Blushed Nudes Eyeshadow Palette.Features:13 looks in one eyeshadow paletteExtraordinary colour from ultra-blendable pigmentsLong wear with sensual finish that lasts up to 12 hours"}
             };
+            #endregion Writing DB with HardCode for Products
         }
 
         public Product GetProduct(int id)

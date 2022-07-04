@@ -1,0 +1,41 @@
+﻿@page "/card"
+@using Blazor_E_Commerce.UseCases.ShoppingCardScreen.Interface
+
+@inject IViewShoppingCardUseCase viewShoppingCardUseCase
+
+<h3>Shopping Card</h3>
+
+<br />
+
+<div class="row">
+    <div class="col-6">
+        <ul>
+            @for (int i = 0; i < order.LineItems.Count; i++)
+            {
+                <LineItemComponent LineItem="order.LineItems[i]"></LineItemComponent>
+
+                @if (i < order.LineItems.Count - 1)
+                {
+                    <li style="list-style:none">
+                        <hr>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+@code {
+    private Order order = null!;
+
+    protected override async Task OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            order = await viewShoppingCardUseCase.Execute();
+            StateHasChanged();
+        }
+    }
+}

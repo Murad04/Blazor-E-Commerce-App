@@ -13,7 +13,7 @@
     <ProjectReference Include="..\Blazor-E-Commerce.Web.AdminPortal\Blazor-E-Commerce.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.CustomerPortal\Blazor-E-Commerce.Web.CustomerPortal.csproj" />
-    <ProjectReference Include="..\ClassLibrary1\DataStoreHardCode.csproj" />
+    <ProjectReference Include="..\Plugins\Blazor_E_Commerce.DataStore.HardCoded\Blazor_E_Commerce.DataStore.HardCoded.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace Blazor_E_Commerce.UseCases.PluginInterfaces.UI
         Task<Order> AddProductAsync(Product product);
         Task<Order> UpdateQuantityAsync(int productID, int quantity);
         Task<Order> UpdateOrderAsync(Order order);
-        Task<Order> DeleteOrderAsync(int productID);
+        Task<Order> DeleteProductAsync(int productID);
         Task<Order> PlaceOrderAsync();
         Task EmpytAsync();
     }

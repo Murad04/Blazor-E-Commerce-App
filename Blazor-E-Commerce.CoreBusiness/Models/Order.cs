@@ -27,7 +27,7 @@ namespace Blazor_E_Commerce.CoreBusiness.Models
         public string UniqID { get; set; } = null!;
 
         #region Insertion and removing processes for Products
-        public void AddProduct(int productID, int quantity, double price)
+        public void AddProduct(int productID, int quantity, decimal price)
         {
             var item = LineItems.FirstOrDefault(product => product.ProductID == productID);
             if(item is not null)

@@ -3,6 +3,8 @@ using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
 using Blazor_E_Commerce.UseCases.SearchProductScreen;
+using Blazor_E_Commerce.UseCases.ShoppingCardScreen;
+using Blazor_E_Commerce.UseCases.ShoppingCardScreen.Interface;
 using Blazor_E_Commerce.UseCases.ViewProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
 using DataStoreHardCode;
@@ -22,6 +24,7 @@ builder.Services.AddScoped<IShoppingCard, ShoppingCard>();
 builder.Services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
 builder.Services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
 builder.Services.AddTransient<IAddProductToCardUseCase, AddProductToCardUseCase>();
+builder.Services.AddTransient<IViewShoppingCardUseCase, ViewShoppingCardUseCase>();
 
 var app = builder.Build();
 

@@ -1,36 +1,37 @@
-﻿@if(LineItem !=null && LineItem.Product!=null)
+﻿@if (LineItem != null && LineItem.Product != null)
 {
     <li class="row">
         <div class="col">
-            <img src="@LineItem.Product.ImageLink">
+            <img src="@LineItem.Product.ImageLink" />
         </div>
         <div class="col">
             <h5>@LineItem.Product.ProductName</h5>
             <div>
                 Quantity:&nbsp;&nbsp;
-                <input type="number" min="0" value="@LineItem.Quantity" @onchange="HandleQuantityChange"> 
+                <input type="number" min="0" value="@LineItem.Quantity" @onchange="HandleQuantityChange" />
+            </div>
+            <div class="mt-2">                
+                 Price:&nbsp;&nbsp;@LineItem.Product.ProductPrice.ToString("c")                
             </div>
         </div>
-        <div>
-            Price&nbsp;&nbsp;@LineItem.Product.ProductPrice.ToString("c") 
-        </div>
         <div class="col">
-            <button clas="btn btn-primary" @onclick="@(()=>DeleteProduct(LineItem.ProductID))">Delete</button>
+            <button class="btn btn-light" @onclick="@(() => DeleteProduct(LineItem.ProductID))">Delete</button>
         </div>
     </li>
 }
 
-@code{
+
+@code {
     [Parameter]
     public OrderLineItem LineItem { get; set; } = null!;
 
-    void  HandleQuantityChange()
+    void HandleQuantityChange()
     {
 
     }
 
     void DeleteProduct(int productID)
     {
-        
+
     }
 }

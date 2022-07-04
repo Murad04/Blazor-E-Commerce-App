@@ -1,0 +1,66 @@
+﻿<div class="card m-2" style="width:25rem;">
+    <div class="card-body">
+        <h5 class="card-title">Order Summary</h5>
+        <div class="card-text d-flex justify-content-between">
+            <div>
+                Items (@itemsCount)
+            </div>
+            <div>
+                @itemsTotalPrice.ToString("c")
+            </div>
+        </div>
+        <div class="card-text d-flex justify-content-between">
+            <div>
+                Shipping and Handling
+            </div>
+            <div>
+                <text>
+                    $0.00
+                </text>
+            </div>
+        </div>
+        <div class="card-text d-flex justify-content-between">
+            <div>
+                Estimated tax:
+            </div>
+            <div>
+                <text>$0.00</text>
+            </div>
+        </div>
+        <hr>
+        <div class="card-text d-flex justify-content-between" style="color:darkred">
+            <div>
+                <b>Order Total</b>
+            </div>
+            <div>
+                <b>@itemsTotalPrice.ToString("c")</b>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" @onclick="PlaceOrder">Place new order</button>
+</div>
+
+@code {
+    int itemsCount = 0;
+    decimal itemsTotalPrice = 0;
+
+    [Parameter]
+    public Order Order { get; set; } = null!;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (Order is not null)
+        {
+            itemsCount = Order.LineItems.Count();
+            itemsTotalPrice = 0;
+            Order.LineItems.ForEach(x => itemsTotalPrice += x.ProductPrice * x.Quantity);
+        }
+    }
+
+    private void PlaceOrder()
+    {
+
+    }
+}

@@ -21,6 +21,7 @@ namespace Blazor_E_Commerce.StateStore.DI
         {
             var order = await shoppingCard.GetOrderAsync();
             if (order != null && order.LineItems != null && order.LineItems.Count > 0) return order.LineItems.Count;
+
             return 0;
         }
 

@@ -33,7 +33,7 @@ namespace Blazor_E_Commerce.CoreBusiness.Models
             if(item is not null)
                 item.Quantity += quantity;
             else
-                LineItems.Add(new OrderLineItem { ProductID=productID,Quantity=quantity,ProductPrice=price,OrderID=item.OrderID});
+                LineItems.Add(new OrderLineItem { ProductID=productID,Quantity=quantity,ProductPrice=price,OrderID=OrderID});
         }
 
         public void RemoveProduct(int productID)

@@ -1,5 +1,7 @@
 using Blazor_E_Commerce.Data;
+using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
 using Blazor_E_Commerce.UseCases.SearchProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
@@ -14,8 +16,12 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 builder.Services.AddSingleton<IProductRepository,ProductRepository>();
+
+builder.Services.AddScoped<IShoppingCard, ShoppingCard>();
+
 builder.Services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
 builder.Services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
+builder.Services.AddTransient<IAddProductToCardUseCase, AddProductToCardUseCase>();
 
 var app = builder.Build();
 

@@ -82,7 +82,7 @@ namespace Blazor_E_Commerce.ShoppingCard.LocalStorage
             Order order = null;
             var strOrder = await jSRuntime.InvokeAsync<string>("localStorage.getItem", cstrShoppingCart);
 
-            if (string.IsNullOrWhiteSpace(strOrder) && strOrder.ToLower() != "null")
+            if (!string.IsNullOrWhiteSpace(strOrder) && strOrder.ToLower() != "null")
                 order = JsonConvert.DeserializeObject<Order>(strOrder);
             else
             {

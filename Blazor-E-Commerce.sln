@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor-E-Commerce.Web.Custo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{6372418C-2AF9-4B12-8E00-4E9687A5160C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_E_Commerce.DataStore.HardCoded", "Plugins\Blazor_E_Commerce.DataStore.HardCoded\Blazor_E_Commerce.DataStore.HardCoded.csproj", "{603BD5DB-F71D-4F12-A23D-63D864597AB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_E_Commerce.DataStore.HardCoded", "Plugins\Blazor_E_Commerce.DataStore.HardCoded\Blazor_E_Commerce.DataStore.HardCoded.csproj", "{603BD5DB-F71D-4F12-A23D-63D864597AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_E_Commerce.ShoppingCard.LocalStorage", "Plugins\Blazor_E_Commerce.ShoppingCard.LocalStorage\Blazor_E_Commerce.ShoppingCard.LocalStorage.csproj", "{F7E91DCE-08EB-4433-92DB-227D6898D82D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_E_Commerce.ShoppingCard.LocalStorage", "Plugins\Blazor_E_Commerce.ShoppingCard.LocalStorage\Blazor_E_Commerce.ShoppingCard.LocalStorage.csproj", "{F7E91DCE-08EB-4433-92DB-227D6898D82D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

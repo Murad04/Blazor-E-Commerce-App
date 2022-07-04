@@ -1,45 +1,27 @@
-﻿@page "/products"
+﻿@page "/"
+@page "/products"
 
 @inject ISearchProductUseCase searchProductUseCase
 
-<h3>Search Products</h3>
-<br/>
+<h3>Search Productss</h3>
+<br />
 
 <SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+<br />
 
-<br/>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                Brand
-            </th>
-            <th>
-                Price
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (products != null && products.Count() > 0)
+@if (products != null && products.Count() > 0)
+{
+    <div class="row">
+        @foreach (var product in products)
         {
-            @foreach (var product in products)
-            {
-                <ProductItemComponent Product="product"></ProductItemComponent>
-            }
+            <ProductCardComponent Product="product"></ProductCardComponent>
         }
-        else
-        {
-            <tr>
-                <td colspan="3">
-                    Cannot find products
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    </div>
+}
+else
+{
+    <text>No products found.</text>
+}
 
 @code {
 

@@ -1,0 +1,14 @@
+﻿<div class="card m-2 p-2" style="width:12rem;">
+    <img src="@Product.ImageLink" class="card-img-top" alt=""/>
+    <div class="card-body">
+        <h5 class="card-title">
+            <NavLink href="@($"product/{Product.ProductID}")">@Product.ProductName</NavLink>
+            <p class="card-text" style="color:darkred">@Product.ProductPrice.ToString("c")</p>
+        </h5>
+    </div>
+</div>
+
+@code{
+    [Parameter]
+    public Product Product { get; set; } = null!;
+}

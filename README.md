@@ -7,7 +7,7 @@
 - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness">Blazor-E-Commerce.CoreBusiness</a> is a layer that contains <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness/Models" style="color:green">Models</a> and <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness/Services" >Services</a> .
 
 - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases">Blazor-E-Commerce.UseCases</a> is a layer that contains  interfaces 
-  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/PluginInterfaces">PluginInterfaces</a/> 
+  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/PluginInterfaces">PluginInterfaces</a> 
   - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/SearchProductScreen">SearchProductScreen</a> 
   - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/ShoppingCardScreen">ShoppingCardScreen</a> 
   - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/ViewProductScreen">ViewProductScreen</a> 

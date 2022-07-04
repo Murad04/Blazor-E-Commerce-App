@@ -1,4 +1,5 @@
 ﻿using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
 using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
 using System;
@@ -13,17 +14,21 @@ namespace Blazor_E_Commerce.UseCases.ViewProductScreen
     {
         private readonly IProductRepository productRepository;
         private readonly IShoppingCard shoppingCard;
+        private readonly IShoppingCardStateStore shoppingCardStateStore;
 
-        public AddProductToCardUseCase(IProductRepository productRepository, IShoppingCard shoppingCard)
+        public AddProductToCardUseCase(IProductRepository productRepository, IShoppingCard shoppingCard,IShoppingCardStateStore shoppingCardStateStore)
         {
             this.productRepository = productRepository;
             this.shoppingCard = shoppingCard;
+            this.shoppingCardStateStore = shoppingCardStateStore;
         }
 
         public void Execute(int productID)
         {
             var product = productRepository.GetProduct(productID);
             shoppingCard.AddProductAsync(product);
+
+            shoppingCardStateStore.UpdateLineItemsCount();
         }
     }
 }

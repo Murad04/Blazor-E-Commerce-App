@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blazor-E-Commerce.CoreBusiness\Blazor-E-Commerce.CoreBusiness.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.StateStore.DI\Blazor-E-Commerce.StateStore.DI.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.AdminPortal\Blazor-E-Commerce.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />

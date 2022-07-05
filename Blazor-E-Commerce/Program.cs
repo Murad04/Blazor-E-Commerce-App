@@ -26,6 +26,8 @@ builder.Services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
 builder.Services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
 builder.Services.AddTransient<IAddProductToCardUseCase, AddProductToCardUseCase>();
 builder.Services.AddTransient<IViewShoppingCardUseCase, ViewShoppingCardUseCase>();
+builder.Services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
+builder.Services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
 
 var app = builder.Build();
 

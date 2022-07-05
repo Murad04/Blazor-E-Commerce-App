@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Blazor-E-Commerce.Web.AdminPortal\Blazor-E-Commerce.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.CustomerPortal\Blazor-E-Commerce.Web.CustomerPortal.csproj" />
+    <ProjectReference Include="..\Plugins\Blazor-E-Commerce.StateStore.DI\Blazor-E-Commerce.StateStore.DI.csproj" />
     <ProjectReference Include="..\Plugins\Blazor_E_Commerce.DataStore.HardCoded\Blazor_E_Commerce.DataStore.HardCoded.csproj" />
     <ProjectReference Include="..\Plugins\Blazor_E_Commerce.ShoppingCard.LocalStorage\Blazor_E_Commerce.ShoppingCard.LocalStorage.csproj" />
   </ItemGroup>

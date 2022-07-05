@@ -1,4 +1,7 @@
-﻿@if (LineItem != null && LineItem.Product != null)
+﻿@inject IDeleteProductUseCase deleteProductUseCase
+@inject IUpdateQuantityUseCase updateQuantityUseCase
+
+@if (LineItem != null && LineItem.Product != null)
 {
     <li class="row">
         <div class="col">
@@ -10,8 +13,8 @@
                 Quantity:&nbsp;&nbsp;
                 <input type="number" min="0" value="@LineItem.Quantity" @onchange="HandleQuantityChange" />
             </div>
-            <div class="mt-2">                
-                 Price:&nbsp;&nbsp;@LineItem.Product.ProductPrice.ToString("c")                
+            <div class="mt-2">
+                Price:&nbsp;&nbsp;@LineItem.Product.ProductPrice.ToString("c")
             </div>
         </div>
         <div class="col">
@@ -25,13 +28,31 @@
     [Parameter]
     public OrderLineItem LineItem { get; set; } = null!;
 
-    void HandleQuantityChange()
-    {
+    [Parameter]
+    public EventCallback<Order> OnDeleteProduct { get; set; }
 
+    [Parameter]
+    public EventCallback<Order> OnUpdateQuantity { get; set; }
+
+    async void HandleQuantityChange(ChangeEventArgs e)
+    {
+        if (e.Value == null && string.IsNullOrWhiteSpace(e.Value.ToString())) return;
+        int quantity = 0;
+        if(int.TryParse(e.Value.ToString(),out quantity))
+        {
+            if (quantity < 0)
+            {
+                return;    
+            }
+
+            var order = await updateQuantityUseCase.Execute(quantity, LineItem.ProductID);
+            await OnUpdateQuantity.InvokeAsync(order);
+        }
     }
 
-    void DeleteProduct(int productID)
+    async void DeleteProduct(int productID)
     {
-
+        var order = await deleteProductUseCase.Execute(productID);
+        await OnDeleteProduct.InvokeAsync(order);
     }
 }

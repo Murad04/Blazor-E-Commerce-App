@@ -10,7 +10,7 @@ namespace Blazor_E_Commerce.StateStore.DI
 
         public void BroadCastStateChange()
         {
-            throw new NotImplementedException();
+            if (this.listeners != null) this.listeners.Invoke();
         }
 
         public void RemoveStateChangeListeners(Action listener) => this.listeners += listener;

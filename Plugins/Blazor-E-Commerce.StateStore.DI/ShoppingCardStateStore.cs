@@ -1,5 +1,5 @@
-﻿using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore;
-using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
+﻿using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore.Interface;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;

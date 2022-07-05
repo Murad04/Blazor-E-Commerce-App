@@ -1,5 +1,5 @@
 ﻿using Blazor_E_Commerce.CoreBusiness.Models;
-using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface;
 using Blazor_E_Commerce.UseCases.ShoppingCardScreen.Interface;
 using System;
 using System.Collections.Generic;

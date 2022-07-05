@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blazor_E_Commerce.UseCases.PluginInterfaces.UI
+namespace Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface
 {
     public interface IShoppingCard
     {

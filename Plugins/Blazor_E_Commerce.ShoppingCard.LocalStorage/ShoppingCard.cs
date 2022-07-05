@@ -1,6 +1,6 @@
 ﻿using Blazor_E_Commerce.CoreBusiness.Models;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
-using Blazor_E_Commerce.UseCases.PluginInterfaces.UI;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface;
 using Microsoft.JSInterop;
 using Newtonsoft.Json;
 using System;

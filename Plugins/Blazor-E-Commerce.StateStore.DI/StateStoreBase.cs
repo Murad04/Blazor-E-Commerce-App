@@ -1,4 +1,4 @@
-﻿using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore;
+﻿using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore.Interface;
 
 namespace Blazor_E_Commerce.StateStore.DI
 {

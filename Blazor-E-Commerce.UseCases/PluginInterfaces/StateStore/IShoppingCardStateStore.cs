@@ -10,5 +10,6 @@ namespace Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore
     {
         Task<int> GetItemsCount();
         void UpdateLineItemsCount();
+        void UpdateProductQuantity();
     }
 }

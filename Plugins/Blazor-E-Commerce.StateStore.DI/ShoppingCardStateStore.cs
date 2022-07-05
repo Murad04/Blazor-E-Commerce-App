@@ -29,5 +29,10 @@ namespace Blazor_E_Commerce.StateStore.DI
         {
             base.BroadCastStateChange();
         }
+
+        public void UpdateProductQuantity()
+        {
+            base.BroadCastStateChange();
+        }
     }
 }

@@ -26,4 +26,6 @@
 
 
 #### Activity & Overall 💻
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=informational"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Murad04/Blazor-E-Commerce-App?style=for-the-badge"> <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/Murad04/Blazor-E-Commerce-App?style=for-the-badge"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=red">  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=success">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=informational"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Murad04/Blazor-E-Commerce-App?style=for-the-badge">
+<br/>
+<img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/Murad04/Blazor-E-Commerce-App?style=for-the-badge"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=red">  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=success">

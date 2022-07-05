@@ -1,8 +1,9 @@
 # Blazor-E-Commerce App
 
-### E-Commerce website build with Blazor.
+### E-Commerce website build with Blazor. 
+_*README.md will be updated !!!*_
 
-#### Project Layers ⬇️ : 
+#### Project Layers ⬇️: 
 
 - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness">Blazor-E-Commerce.CoreBusiness</a> is a layer that contains <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness/Models" style="color:green">Models</a> and <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.CoreBusiness/Services" >Services</a> .
 

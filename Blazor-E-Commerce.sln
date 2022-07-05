@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_E_Commerce.DataStore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_E_Commerce.ShoppingCard.LocalStorage", "Plugins\Blazor_E_Commerce.ShoppingCard.LocalStorage\Blazor_E_Commerce.ShoppingCard.LocalStorage.csproj", "{F7E91DCE-08EB-4433-92DB-227D6898D82D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor-E-Commerce.StateStore.DI", "Plugins\Blazor-E-Commerce.StateStore.DI\Blazor-E-Commerce.StateStore.DI.csproj", "{29F233E0-96B8-4912-8786-1D7B5B124A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor-E-Commerce.StateStore.DI", "Plugins\Blazor-E-Commerce.StateStore.DI\Blazor-E-Commerce.StateStore.DI.csproj", "{29F233E0-96B8-4912-8786-1D7B5B124A90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

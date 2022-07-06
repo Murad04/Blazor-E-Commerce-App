@@ -20,7 +20,6 @@ namespace Blazor_E_Commerce.DataStore.HardCoded
         public int CreateOrder(Order order)
         {
             order.OrderID = orders.Count + 1;
-            order.UniqID = Guid.NewGuid().ToString();
             orders.Add(order.OrderID.Value, order);
             return order.OrderID.Value;
         }

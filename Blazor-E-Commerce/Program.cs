@@ -1,4 +1,7 @@
+using Blazor_E_Commerce.CoreBusiness.Services;
+using Blazor_E_Commerce.CoreBusiness.Services.Interfaces;
 using Blazor_E_Commerce.Data;
+using Blazor_E_Commerce.DataStore.HardCoded;
 using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.StateStore.DI;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
@@ -22,16 +25,19 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 builder.Services.AddSingleton<IProductRepository,ProductRepository>();
+builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
 
 builder.Services.AddScoped<IShoppingCard, ShoppingCard>();
 builder.Services.AddScoped<IShoppingCardStateStore, ShoppingCardStateStore>();
 
+builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
 builder.Services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
 builder.Services.AddTransient<IAddProductToCardUseCase, AddProductToCardUseCase>();
 builder.Services.AddTransient<IViewShoppingCardUseCase, ViewShoppingCardUseCase>();
 builder.Services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
 builder.Services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
+builder.Services.AddTransient<IPlaceOrderUseCase, PlaceOrderUseCase>();
 
 var app = builder.Build();
 

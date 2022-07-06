@@ -1,4 +1,6 @@
-﻿<div class="card m-2" style="width:25rem;">
+﻿@inject NavigationManager navigationManager
+
+<div class="card m-2" style="width:25rem;">
     <div class="card-body">
         <h5 class="card-title">Order Summary</h5>
         <div class="card-text d-flex justify-content-between">
@@ -37,7 +39,10 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary" @onclick="PlaceOrder">Place new order</button>
+    @if (!HidePlaceOrder)
+    {
+        <button class="btn btn-primary" @onclick="PlaceOrder">Place new order</button>
+    }
 </div>
 
 @code {
@@ -46,6 +51,9 @@
 
     [Parameter]
     public Order Order { get; set; } = null!;
+
+    [Parameter]
+    public bool HidePlaceOrder { get; set; } = false;
 
     protected override void OnParametersSet()
     {
@@ -61,6 +69,6 @@
 
     private void PlaceOrder()
     {
-
+        navigationManager.NavigateTo("/PlaceOrder");
     }
 }

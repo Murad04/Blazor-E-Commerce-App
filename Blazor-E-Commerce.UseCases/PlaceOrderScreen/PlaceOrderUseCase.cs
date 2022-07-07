@@ -1,5 +1,6 @@
 ﻿using Blazor_E_Commerce.CoreBusiness.Models;
 using Blazor_E_Commerce.CoreBusiness.Services;
+using Blazor_E_Commerce.CoreBusiness.Services.Interfaces;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore.Interface;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface;
@@ -14,12 +15,12 @@ namespace Blazor_E_Commerce.UseCases.PlaceOrderScreen
 {
     public class PlaceOrderUseCase : IPlaceOrderUseCase
     {
-        private readonly OrderService orderService;
+        private readonly IOrderService orderService;
         private readonly IOrderRepository orderRepository;
         private readonly IShoppingCard shoppingCard;
         private readonly IShoppingCardStateStore shoppingCardStateStore;
 
-        public PlaceOrderUseCase(OrderService orderService, IOrderRepository orderRepository, IShoppingCard shoppingCard, IShoppingCardStateStore shoppingCardStateStore)
+        public PlaceOrderUseCase(IOrderRepository orderRepository, IOrderService orderService, IShoppingCard shoppingCard, IShoppingCardStateStore shoppingCardStateStore)
         {
             this.orderService = orderService;
             this.orderRepository = orderRepository;

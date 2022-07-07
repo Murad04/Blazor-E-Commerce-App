@@ -1,6 +1,5 @@
 using Blazor_E_Commerce.CoreBusiness.Services;
 using Blazor_E_Commerce.CoreBusiness.Services.Interfaces;
-using Blazor_E_Commerce.Data;
 using Blazor_E_Commerce.DataStore.HardCoded;
 using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.StateStore.DI;
@@ -8,7 +7,6 @@ using Blazor_E_Commerce.UseCases.OrderConfirmationScreen;
 using Blazor_E_Commerce.UseCases.OrderConfirmationScreen.Interface;
 using Blazor_E_Commerce.UseCases.PlaceOrderScreen;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
-using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore.Interface;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.UI.Interface;
 using Blazor_E_Commerce.UseCases.SearchProductScreen;
@@ -18,8 +16,6 @@ using Blazor_E_Commerce.UseCases.ShoppingCardScreen.Interface;
 using Blazor_E_Commerce.UseCases.ViewProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
 using DataStoreHardCode;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 

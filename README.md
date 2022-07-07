@@ -9,9 +9,8 @@ _*README.md will be updated !!!*_
 
 - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases">Blazor-E-Commerce.UseCases</a> is a layer that contains  interfaces 
   - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/PluginInterfaces">PluginInterfaces</a> 
-  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/AdminPortal
-  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/ViewProductScreen">ViewProductScreen</a> 
-  -  and use cases.
+  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/AdminPortal">AdminPortal</a> contains interfaces and usecases for Admin Portal
+  - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor-E-Commerce.UseCases/CustomerPortal">CustomerPortal</a> contains interfaces and usecases for Customer Portal
 </li>
 
 

@@ -3,6 +3,12 @@ using Blazor_E_Commerce.CoreBusiness.Services.Interfaces;
 using Blazor_E_Commerce.DataStore.HardCoded;
 using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.StateStore.DI;
+using Blazor_E_Commerce.UseCases.AdminPortal.OrderDetailScreen;
+using Blazor_E_Commerce.UseCases.AdminPortal.OrderDetailScreen.Interfaces;
+using Blazor_E_Commerce.UseCases.AdminPortal.OutstandingOrdersScreen;
+using Blazor_E_Commerce.UseCases.AdminPortal.OutstandingOrdersScreen.Interfaces;
+using Blazor_E_Commerce.UseCases.AdminPortal.ProcessedOrdersScreen;
+using Blazor_E_Commerce.UseCases.AdminPortal.ProcessedOrdersScreen.Interfaces;
 using Blazor_E_Commerce.UseCases.OrderConfirmationScreen;
 using Blazor_E_Commerce.UseCases.OrderConfirmationScreen.Interface;
 using Blazor_E_Commerce.UseCases.PlaceOrderScreen;
@@ -38,6 +44,11 @@ builder.Services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
 builder.Services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
 builder.Services.AddTransient<IPlaceOrderUseCase, PlaceOrderUseCase>();
 builder.Services.AddTransient<IViewOrderConfirmationUseCase, ViewOrderConfirmationUseCase>();
+
+builder.Services.AddTransient<IViewOutStandingOrdersUseCase, ViewOutStandingOrdersUseCase>();
+builder.Services.AddTransient<IProcessOrderUseCase, ProcessOrderUseCase>();
+builder.Services.AddTransient<IViewOrderDetailUseCase, ViewOrderDetailUseCase>();
+builder.Services.AddTransient<IViewProcessedOrdersUseCase, ViewProcessedOrdersUseCase>();
 
 var app = builder.Build();
 

@@ -24,3 +24,4 @@ namespace Blazor_E_Commerce.UseCases.AdminPortal.ProcessedOrdersScreen
         }
     }
 }
+

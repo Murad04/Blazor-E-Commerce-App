@@ -1,0 +1,59 @@
+﻿@page "/orderconfirm/{uniqueID}"
+@using Blazor_E_Commerce.CoreBusiness.Models
+@using Blazor_E_Commerce.UseCases.OrderConfirmationScreen.Interface
+@using Blazor_E_Commerce.Web.CustomerPortal.Controls;
+
+@inject IViewOrderConfirmationUseCase viewOrderConfirmationUseCase;
+
+<h3>Order Confirmation</h3>
+<br />
+
+@if (order is not null)
+{
+    <p>
+        <b>Shipping Info</b>
+    </p>
+    <p>@order.CustomerName</p>
+    <p>@order.CustomerAddress</p>
+    <p>@order.CustomerCity</p>
+    <p>@order.CustomerStateProvince</p>
+    <p>@order.CustomerCountry</p>
+    <br />
+    <OrderSummaryComponent Order="order" HidePlaceOrderButton="true"></OrderSummaryComponent>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in order.LineItems)
+            {
+                <tr>
+                    <td>@item.Product.ProductName</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Product.ProductPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private Order order=null!;
+
+    [Parameter]
+    public string uniqueID { get; set; } = null!;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (!string.IsNullOrWhiteSpace(uniqueID))
+        {
+            order = viewOrderConfirmationUseCase.Execute(uniqueID);
+        }
+    }
+}

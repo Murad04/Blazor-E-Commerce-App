@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blazor_E_Commerce.UseCases.ShoppingCardScreen
+namespace Blazor_E_Commerce.UseCases.PlaceOrderScreen
 {
     public class PlaceOrderUseCase : IPlaceOrderUseCase
     {

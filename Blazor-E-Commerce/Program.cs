@@ -4,6 +4,9 @@ using Blazor_E_Commerce.Data;
 using Blazor_E_Commerce.DataStore.HardCoded;
 using Blazor_E_Commerce.ShoppingCard.LocalStorage;
 using Blazor_E_Commerce.StateStore.DI;
+using Blazor_E_Commerce.UseCases.OrderConfirmationScreen;
+using Blazor_E_Commerce.UseCases.OrderConfirmationScreen.Interface;
+using Blazor_E_Commerce.UseCases.PlaceOrderScreen;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore;
 using Blazor_E_Commerce.UseCases.PluginInterfaces.StateStore.Interface;
@@ -38,6 +41,7 @@ builder.Services.AddTransient<IViewShoppingCardUseCase, ViewShoppingCardUseCase>
 builder.Services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
 builder.Services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
 builder.Services.AddTransient<IPlaceOrderUseCase, PlaceOrderUseCase>();
+builder.Services.AddTransient<IViewOrderConfirmationUseCase, ViewOrderConfirmationUseCase>();
 
 var app = builder.Build();
 

@@ -4,7 +4,7 @@ namespace Blazor_E_Commerce.StateStore.DI
 {
     public class StateStoreBase : IStateStore
     {
-        protected Action listeners;
+        protected Action listeners = null!;
 
         public void AddStateChangeListeners(Action listener) => this.listeners += listener;
 

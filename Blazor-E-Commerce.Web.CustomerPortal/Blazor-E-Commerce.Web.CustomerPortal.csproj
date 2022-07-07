@@ -7,6 +7,10 @@
     <RootNamespace>Blazor_E_Commerce.Web.CustomerPortal</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\OrderConfirmationComponent.razor" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -20,6 +24,18 @@
   <ItemGroup>
     <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
     <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\OrderConfirmationComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\OrderConfirmationComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\OrderConfirmationComponent.razor" />
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ typeof(Blazor_E_Commerce.Web.AdminPortal.Pages.OutstandingOrdersComponent).Assem
     <Found Context="routeData">
         <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
             <NotAuthorized>
-
+                    <LoginComponent></LoginComponent>
             </NotAuthorized>
         </AuthorizeRouteView>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />

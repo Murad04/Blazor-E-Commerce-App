@@ -16,4 +16,10 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="Controls\LoginComponent.razor">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	  </Content>
+	</ItemGroup>
+
 </Project>

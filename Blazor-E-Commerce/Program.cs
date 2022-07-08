@@ -26,6 +26,13 @@ using DataStoreHardCode;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddAuthentication("Blazor_E_Commerce.CookieAuth").AddCookie("Blazor_E_Commerce.CookieAuth", config =>
+{
+    config.Cookie.Name = "Blazor_E_Commerce.CookieAuth";
+    config.LoginPath = "/authenticate";
+});
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
@@ -66,6 +73,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

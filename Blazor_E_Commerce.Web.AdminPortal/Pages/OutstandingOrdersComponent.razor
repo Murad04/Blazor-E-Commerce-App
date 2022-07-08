@@ -1,0 +1,24 @@
+﻿@page "/outstandingorders"
+@page "/admin" 
+@using Blazor_E_Commerce.UseCases.AdminPortal.OutstandingOrdersScreen.Interfaces
+
+@attribute [Authorize]
+
+@inject IViewOutStandingOrdersUseCase viewOutstandingOrderUseCase 
+
+<h3>Outstanding Orders</h3>
+<br/>
+<OrderListComponent Orders="orders"></OrderListComponent>
+
+@code { 
+
+    private IEnumerable<Order> orders;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        orders = viewOutstandingOrderUseCase.Execute();
+    }
+
+}

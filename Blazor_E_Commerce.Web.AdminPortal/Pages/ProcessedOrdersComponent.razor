@@ -1,0 +1,22 @@
+﻿@page "/processedorders"
+@using Blazor_E_Commerce.UseCases.AdminPortal.ProcessedOrdersScreen.Interfaces
+
+@inject IViewProcessedOrdersUseCase viewProcessedOrdersUseCase
+
+@attribute [Authorize]
+
+<h3>Processed Orders</h3>
+<br />
+<OrderListComponent Orders="orders"></OrderListComponent>
+
+
+@code {
+    private IEnumerable<Order> orders;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        orders = viewProcessedOrdersUseCase.Execute();
+    }
+}

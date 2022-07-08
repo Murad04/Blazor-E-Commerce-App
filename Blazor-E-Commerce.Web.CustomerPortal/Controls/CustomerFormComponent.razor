@@ -1,4 +1,5 @@
-﻿@if(customerViewModel is not null)
+﻿@using Blazor_E_Commerce.Web.CustomerPortal.ViewModels
+@if(customerViewModel is not null)
 {
     <EditForm Model="customerViewModel" class="form-line" OnValidSubmit="HandleValidSubmit">
         <DataAnnotationsValidator></DataAnnotationsValidator>

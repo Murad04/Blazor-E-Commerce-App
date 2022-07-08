@@ -1,10 +1,14 @@
 ﻿<Router AppAssembly="@typeof(App).Assembly"
         AdditionalAssemblies="new[] {
 typeof(Blazor_E_Commerce.Web.CustomerPortal.Pages.ViewProductComponent).Assembly,
-typeof(Blazor_E_Commerce.Web.AdminPortal.Pages.OutstandingOrdersComponent).Assembly
+typeof(Blazor_E_Commerce.Web.AdminPortal.Pages.OutstandingOrdersComponent).Assembly,
 }">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+            <NotAuthorized>
+
+            </NotAuthorized>
+        </AuthorizeRouteView>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>

@@ -1,41 +1,41 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Blazor_E_Commerce.Web.CustomerPortal</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>Blazor_E_Commerce.Web.CustomerPortal</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Pages\OrderConfirmationComponent.razor" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="Pages\OrderConfirmationComponent.razor" />
+	</ItemGroup>
 
 
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="11.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
-    <ProjectReference Include="..\Blazor-E-Commerce.Web.Common\Blazor-E-Commerce.Web.Common.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
+		<ProjectReference Include="..\Blazor_E_Commerce.Web.Common\Blazor_E_Commerce.Web.Common.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\OrderConfirmationComponent.razor" />
-  </ItemGroup>
+	<ItemGroup>
+		<UpToDateCheckInput Remove="Pages\OrderConfirmationComponent.razor" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\OrderConfirmationComponent.razor" />
-  </ItemGroup>
+	<ItemGroup>
+		<_ContentIncludedByDefault Remove="Pages\OrderConfirmationComponent.razor" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="Pages\OrderConfirmationComponent.razor" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="Pages\OrderConfirmationComponent.razor" />
+	</ItemGroup>
 
 </Project>

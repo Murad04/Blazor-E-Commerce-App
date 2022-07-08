@@ -4,7 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Blazor_E_Commerce.Web.Common</RootNamespace>
   </PropertyGroup>
 
 
@@ -14,6 +13,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blazor-E-Commerce.CoreBusiness\Blazor-E-Commerce.CoreBusiness.csproj" />
+    <ProjectReference Include="..\Blazor-E-Commerce.UseCases\Blazor-E-Commerce.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

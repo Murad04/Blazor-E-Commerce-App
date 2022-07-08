@@ -22,6 +22,6 @@ namespace Blazor_E_Commerce.Web.CustomerPortal.ViewModels
         public string CustomerStateProvince { get; set; } = null!;
 
         [Required]
-        public string CustomerCountry { get; set; } = null!;    
+        public string CustomerCountry { get; set; } = null!;
     }
 }

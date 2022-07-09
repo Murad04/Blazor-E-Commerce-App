@@ -54,10 +54,17 @@
     [Parameter]
     public int Id { get; set; } = 0;
 
-
     private Order order = null!;
 
-  
+    private AuthenticationState authState;
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authStateTask { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        authState = await authStateTask;
+    }
 
     protected override void OnParametersSet()
     {
@@ -71,8 +78,9 @@
 
     private void HandleProcessOrder()
     {
-        if (order != null)
+        if (order != null && authState!=null)
         {
+            processOrderUseCase.Execute(order.OrderID.Value, authState.User.Identity.Name);
             NavigationManager.NavigateTo("outstandingorders");
         }
     }

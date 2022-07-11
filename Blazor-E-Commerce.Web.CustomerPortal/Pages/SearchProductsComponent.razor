@@ -1,29 +1,30 @@
 ﻿@page "/"
 @page "/products"
+@using Blazor_E_Commerce.Web.Common.Controls
 
 
 @inject ISearchProductUseCase searchProductUseCase
 
-<SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
-<br />
+<div class="container">
+    <SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+    <br />
 
-@if (products != null && products.Count() > 0)
-{
-    <div class="row">
-        @foreach (var product in products)
-        {
-            <ProductCardComponent Product="product"></ProductCardComponent>
-        }
-    </div>
-}
-else
-{
-    <text>No products found.</text>
-}
-
+    @if (products != null && products.Count() > 0)
+    {
+        <div class="row">
+            @foreach (var product in products)
+            {
+                <ProductCardComponent Product="product"></ProductCardComponent>
+            }
+        </div>
+    }
+    else
+    {
+        <text>No products found.</text>
+    }
+</div>
 @code {
-
-    private IEnumerable<Product> products;
+    private IEnumerable<Product> products = null!;
 
     protected override void OnInitialized()
     {

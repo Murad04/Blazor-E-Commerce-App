@@ -1,5 +1,6 @@
 ﻿using Blazor_E_Commerce.CoreBusiness.Models;
 using Blazor_E_Commerce.DataStore.SQL.Dapper.Helpers.Interface;
+using Blazor_E_Commerce.UseCases.PluginInterfaces.DataStore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Blazor_E_Commerce.DataStore.SQL.Dapper
 {
-    public class OrderRepository
+    public class OrderRepository:IOrderRepository
     {
         private readonly IDataAccess dataAccess;
 
@@ -77,12 +78,12 @@ namespace Blazor_E_Commerce.DataStore.SQL.Dapper
             order.LineItems = GetLineItemsByOrderID(order.OrderID.Value).ToList();
 
             return order;
-        }
+        }   
 
-        public Order GetOrderByUniqueId(string uniqueId)
+        public Order GetOrderByUniqueID(string UniqueID)
         {
-            var sql = "SELECT * FROM [ORDER] WHERE UniqueId = @UniqueId";
-            var order = dataAccess.QuerySingle<Order, dynamic>(sql, new { UniqueId = uniqueId });
+            var sql = "SELECT * FROM [ORDER] WHERE UniqID = @UniqueId";
+            var order = dataAccess.QuerySingle<Order, dynamic>(sql, new { UniqueId = UniqueID });
             order.LineItems = GetLineItemsByOrderID(order.OrderID.Value).ToList();
 
             return order;

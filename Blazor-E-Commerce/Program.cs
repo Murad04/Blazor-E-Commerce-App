@@ -21,7 +21,14 @@ using Blazor_E_Commerce.UseCases.ShoppingCardScreen;
 using Blazor_E_Commerce.UseCases.ShoppingCardScreen.Interface;
 using Blazor_E_Commerce.UseCases.ViewProductScreen;
 using Blazor_E_Commerce.UseCases.ViewProductScreen.Interfaces;
-using DataStoreHardCode;
+//using DataStoreHardCode;
+using Blazor_E_Commerce.DataStore.SQL.Dapper.Helpers;
+using Blazor_E_Commerce.DataStore.SQL.Dapper;
+using OrderRepository = Blazor_E_Commerce.DataStore.SQL.Dapper.OrderRepository;
+using Blazor_E_Commerce.DataStore.SQL.Dapper.Helpers.Interface;
+using System.Configuration;
+using Blazor_E_Commerce.Web.Common.JsInterOp;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,11 +43,14 @@ builder.Services.AddAuthentication("Blazor_E_Commerce.CookieAuth").AddCookie("Bl
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-builder.Services.AddSingleton<IProductRepository,ProductRepository>();
-builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<JsNavigator>();
 
 builder.Services.AddScoped<IShoppingCard, ShoppingCard>();
 builder.Services.AddScoped<IShoppingCardStateStore, ShoppingCardStateStore>();
+
+builder.Services.AddTransient<IDataAccess>(sp=>new DataAccess(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IViewProductUseCase, ViewProductUseCase>();

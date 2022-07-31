@@ -1,7 +1,6 @@
 # Blazor-E-Commerce App
 
 ### E-Commerce website build with Blazor. 
-_*README.md will be updated !!!*_
 
 #### Project Layers ⬇️: 
 
@@ -23,6 +22,7 @@ _*README.md will be updated !!!*_
 
 - <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Plugins" >Plugins</a> is a layer that contains <a href="https://github.com/Murad04/Blazor-E-Commerce-App/blob/master/Plugins/Blazor_E_Commerce.DataStore.HardCoded/ProductRepository.cs">Products</a> with HardCoded and <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Plugins/Blazor_E_Commerce.ShoppingCard.LocalStorage">Local Storage</a> for _Shopping Card_ .
 
+- <a href="https://github.com/Murad04/Blazor-E-Commerce-App/tree/master/Blazor_E_Commerce.DataStore.SQL.Dapper">Dapper</a> used for database operations
 
 #### Activity & Overall 💻
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Murad04/Blazor-E-Commerce-App?style=for-the-badge&color=informational"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Murad04/Blazor-E-Commerce-App?style=for-the-badge">
